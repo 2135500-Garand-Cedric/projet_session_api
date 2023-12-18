@@ -1,0 +1,45 @@
+[{
+    "nom": "Informatique",
+    "enseignant": "M. Martinez",
+    "nombreHeures": 90,
+    "estGratuit": true,
+    "notes": [85, 90, 92, 99, 65]
+},
+{
+    "nom": "Philo",
+    "enseignant": "Mme. Davis",
+    "nombreHeures": 40,
+    "estGratuit": true,
+    "notes": [88, 84, 89, 76]
+},
+{
+    "nom": "Chimie",
+    "enseignant": "M. Johnson",
+    "nombreHeures": 50,
+    "estGratuit": false,
+    "cout": 200,
+    "notes": [87, 89]
+},
+{
+    "nom": "Histoire",
+    "enseignant": "Mme. Adams",
+    "nombreHeures": 60,
+    "estGratuit": false,
+    "cout": 220,
+    "notes": [88, 85, 92, 67]
+},
+{
+    "nom": "Anglais",
+    "enseignant": "Mme. Tremblay",
+    "nombreHeures": 50,
+    "estGratuit": false,
+    "cout": 210,
+    "notes": [90, 86, 88]
+},
+{
+    "nom": "Math",
+    "enseignant": "M. Marx",
+    "nombreHeures": 45,
+    "estGratuit": true,
+    "notes": [75, 81, 88]
+}]

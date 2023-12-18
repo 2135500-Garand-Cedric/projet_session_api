@@ -1,0 +1,363 @@
+[
+    {
+        "nom": "Isabel",
+        "courriel": "isabel@hotmail.com",
+        "dateNaissance": "2003-11-02",
+        "da": "7654323",
+        "estVulkins": true,
+        "anneeEtude": 5,
+        "nomCohorte": "chats_vaillants",
+        "cours": [
+            {
+                "nom": "Informatique",
+                "enseignant": "M. Martinez",
+                "nombreHeures": 90,
+                "estGratuit": true,
+                "notes": [85, 90, 92, 99, 65]
+            },
+            {
+                "nom": "Philo",
+                "enseignant": "Mme. Davis",
+                "nombreHeures": 40,
+                "estGratuit": true,
+                "notes": [88, 84, 89, 76]
+            },
+            {
+                "nom": "Chimie",
+                "enseignant": "M. Johnson",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 200,
+                "notes": [87, 89]
+            }
+        ]
+    },
+    {
+        "nom": "Jack",
+        "courriel": "jack@hotmail.com",
+        "dateNaissance": "2005-04-30",
+        "da": "6543211",
+        "estVulkins": false,
+        "anneeEtude": 4,
+        "nomCohorte": "chevaux_curieux",
+        "cours": [
+            {
+                "nom": "Histoire",
+                "enseignant": "Mme. Adams",
+                "nombreHeures": 60,
+                "estGratuit": false,
+                "cout": 220,
+                "notes": [88, 85, 92, 67]
+            }
+        ]
+    },
+    {
+        "nom": "Ana",
+        "courriel": "ana@gmail.com",
+        "dateNaissance": "2000-01-14",
+        "da": "9876545",
+        "estVulkins": true,
+        "anneeEtude": 2,
+        "nomCohorte": "baleines_bossues",
+        "cours": [
+            {
+                "nom": "Histoire",
+                "enseignant": "Mme. Adams",
+                "nombreHeures": 60,
+                "estGratuit": false,
+                "cout": 220,
+                "notes": [76, 89, 90, 87]
+            },
+            {
+                "nom": "Anglais",
+                "enseignant": "Mme. Tremblay",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 210,
+                "notes": [30, 60]
+            },
+            {
+                "nom": "Math",
+                "enseignant": "M. Marx",
+                "nombreHeures": 45,
+                "estGratuit": true,
+                "notes": [98, 99, 95]
+            }
+        ]
+    },
+    {
+        "nom": "Eva",
+        "courriel": "eva@outlook.com",
+        "dateNaissance": "2004-08-14",
+        "da": "6543210",
+        "estVulkins": true,
+        "anneeEtude": 3,
+        "nomCohorte": "chats_vaillants",
+        "cours": [
+            {
+                "nom": "Informatique",
+                "enseignant": "M. Martinez",
+                "nombreHeures": 90,
+                "estGratuit": true,
+                "notes": [80, 85, 90, 67]
+            },  
+            {   
+                "nom": "Anglais",
+                "enseignant": "Mme. Tremblay",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 210,
+                "notes": [85, 90]
+            }
+        ]
+    },
+    {
+        "nom": "Frank",
+        "courriel": "frank@homtail.com",
+        "dateNaissance": "2003-05-03",
+        "da": "7654322",
+        "estVulkins": false,
+        "anneeEtude": 2,
+        "nomCohorte": "chevaux_curieux",
+        "cours": [
+            {
+                "nom": "Histoire",
+                "enseignant": "Mme. Adams",
+                "nombreHeures": 60,
+                "estGratuit": false,
+                "cout": 220,
+                "notes": [88, 84, 91, 99]
+            }
+        ]
+    },
+    {
+        "nom": "George",
+        "courriel": "george@outlook.com",
+        "dateNaissance": "2006-02-22",
+        "da": "9876544",
+        "estVulkins": true,
+        "anneeEtude": 1,
+        "nomCohorte": "baleines_bossues",
+        "cours": [
+            {
+                "nom": "Chimie",
+                "enseignant": "M. Johnson",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 200,
+                "notes": [67]
+            },
+            {
+                "nom": "Histoire",
+                "enseignant": "Mme. Adams",
+                "nombreHeures": 60,
+                "estGratuit": false,
+                "cout": 220,
+                "notes": [89, 89, 45, 65]
+            },
+            {
+                "nom": "Anglais",
+                "enseignant": "Mme. Tremblay",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 210,
+                "notes": [91, 89]
+            },
+            {
+                "nom": "Math",
+                "enseignant": "M. Marx",
+                "nombreHeures": 45,
+                "estGratuit": true,
+                "notes": [89, 76, 90, 87, 87]
+            }
+        ]
+    },
+    {
+        "nom": "David",
+        "courriel": "david@cegepvicto.com",
+        "dateNaissance": "2003-09-30",
+        "da": "2345678",
+        "estVulkins": false,
+        "anneeEtude": 1,
+        "nomCohorte": "chats_vaillants",
+        "cours": [
+          {
+            "nom": "Informatique",
+            "enseignant": "Mme. Martinez",
+            "nombreHeures": 90,
+            "estGratuit": true,
+            "notes": [75, 81, 88, 100]
+          }
+        ]
+    },
+    {
+        "nom": "Emile",
+        "courriel": "emile@gmail.com",
+        "dateNaissance": "1994-01-18",
+        "da": "3456789",
+        "estVulkins": true,
+        "anneeEtude": 2,
+        "nomCohorte": "chevaux_curieux",
+        "cours": [
+            {
+                "nom": "Chimie",
+                "enseignant": "M. Johnson",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 200,
+                "notes": [86, 79, 80]
+            }, 
+            {
+                "nom": "Math",
+                "enseignant": "M. Marx",
+                "nombreHeures": 45,
+                "estGratuit": true,
+                "notes": [76, 90, 87]
+            },
+            {
+                "nom": "Informatique",
+                "enseignant": "M. Martinez",
+                "nombreHeures": 90,
+                "estGratuit": true,
+                "notes": [76, 80]
+            }
+        ]
+    },
+    {
+        "nom": "Jean",
+        "courriel": "frank.miller@gmail.com",
+        "dateNaissance": "1990-03-25",
+        "da": "4567890",
+        "estVulkins": true,
+        "anneeEtude": 4,
+        "nomCohorte": "baleines_bossues",
+        "cours": [
+            {
+                "nom": "Philo",
+                "enseignant": "Mme. Davis",
+                "nombreHeures": 40,
+                "estGratuit": true,
+                "notes": [75, 81, 94]
+            },
+            {
+                "nom": "Histoire",
+                "enseignant": "Mme. Adams",
+                "nombreHeures": 60,
+                "estGratuit": false,
+                "cout": 220,
+                "notes": [90, 88, 71, 75]
+            }
+        ]
+    },
+    {
+        "nom": "Karen",
+        "courriel": "karen@hotmail.com",
+        "dateNaissance": "2001-05-12",
+        "da": "5678901",
+        "estVulkins": false,
+        "anneeEtude": 3,
+        "nomCohorte": "chats_vaillants",
+        "cours": [
+            {
+                "nom": "Informatique",
+                "enseignant": "M. Martinez",
+                "nombreHeures": 90,
+                "estGratuit": true,
+                "notes": [76, 89, 90, 30]
+            },
+            {
+                "nom": "Chimie",
+                "enseignant": "M. Johnson",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 200,
+                "notes": [29, 98]
+            },
+            {
+                "nom": "Anglais",
+                "enseignant": "Mme. Tremblay",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 210,
+                "notes": [59, 90, 87, 90]
+            }
+        ]
+    },
+    {
+        "nom": "Alice",
+        "courriel": "alice@hotmail.com",
+        "dateNaissance": "1998-07-21",
+        "da": "1234567",
+        "estVulkins": true,
+        "anneeEtude": 2,
+        "nomCohorte": "chats_vaillants",
+        "cours": [
+            {
+                "nom": "Math",
+                "enseignant": "M. Marx",
+                "nombreHeures": 45,
+                "estGratuit": true,
+                "notes": [75, 81, 88]
+            },
+            {
+                "nom": "Philo",
+                "enseignant": "Mme. Davis",
+                "nombreHeures": 40,
+                "estGratuit": true,
+                "notes": [88, 85]
+            }
+        ]
+    },
+    {
+        "nom": "Bob",
+        "courriel": "bob@homtail.com",
+        "dateNaissance": "2000-04-12",
+        "da": "7654321",
+        "estVulkins": false,
+        "anneeEtude": 4,
+        "nomCohorte": "chevaux_curieux",
+        "cours": [
+            {
+                "nom": "Chimie",
+                "enseignant": "M. Johnson",
+                "nombreHeures": 50,
+                "estGratuit": false,
+                "cout": 200,
+                "notes": [87, 90, 91]
+            }
+        ]
+    },
+    {
+        "nom": "Caroline",
+        "courriel": "caroline@carrefour.cegepvicto.com",
+        "dateNaissance": "1999-12-05",
+        "da": "9876543",
+        "estVulkins": true,
+        "anneeEtude": 3,
+        "nomCohorte": "baleines_bossues",
+        "cours": [
+            {
+                "nom": "Informatique",
+                "enseignant": "M. Martinez",
+                "nombreHeures": 90,
+                "estGratuit": true,
+                "notes": [85, 76, 88, 90]
+            },
+            {
+                "nom": "Philo",
+                "enseignant": "Mme. Davis",
+                "nombreHeures": 40,
+                "estGratuit": true,
+                "notes": [80, 90, 100, 95, 85]
+            },
+            {
+                "nom": "Histoire",
+                "enseignant": "Mme. Adams",
+                "nombreHeures": 60,
+                "estGratuit": false,
+                "cout": 220,
+                "notes": [99, 98, 97]
+            }
+        ]
+    }
+]

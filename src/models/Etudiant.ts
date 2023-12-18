@@ -4,6 +4,12 @@ import mongoose, { Schema, model } from 'mongoose';
 const nomCohortes: string[] = ['chats_vaillants', 'chevaux_curieux', 'baleines_bossues'];
 const nomCours: string[] = ['Informatique', 'Philo', 'Chimie', 'Histoire', 'Anglais', 'Math'];
 
+export interface ISessionUser {
+    id: number;
+    email: string;
+    name: string;
+}
+
 export interface IMoyenneEtudiant {
     _id: string;
     cours: IMoyenneCours[];

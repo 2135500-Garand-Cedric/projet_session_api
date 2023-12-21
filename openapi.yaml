@@ -1,0 +1,300 @@
+openapi: 3.0.0
+info:
+  title: projetsession
+  description: Un api effectuant la gestion d'élèves et de cours
+  version: 1.0.0
+servers:
+- url: http://127.0.0.1:3000/
+paths:
+  /etudiants:
+    get:
+      tags:
+      - Etudiant
+      summary: Affiche la liste de tous les étudiants
+      responses:
+        "200":
+          description: Un tableau d'étudiants
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiants'
+    put:
+      tags:
+      - Etudiant
+      summary: Modifie un étudiant
+      requestBody:
+        description: Les nouvelles informations de l'étudiant
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Etudiant'
+        required: true
+      responses:
+        "201":
+          description: L'étudiant modifié
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiant'
+    post:
+      tags:
+      - Etudiant
+      summary: Crée un étudiant
+      requestBody:
+        description: Les informations pour créer un étudiant
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Etudiant'
+        required: true
+      responses:
+        "201":
+          description: Le nouvel étudiant créé
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiant'
+  /etudiants/delete/{id}:
+    delete:
+      tags:
+      - Etudiant
+      summary: Supprime un étudiant selon son id
+      parameters:
+      - name: id
+        in: path
+        description: Le id de l'étudiant à supprimer
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          example: 10
+      responses:
+        "200":
+          description: L'étudiant à été supprimé
+  /etudiants/{id}:
+    get:
+      tags:
+      - Etudiant
+      summary: Affiche un étudiant selon son id
+      parameters:
+      - name: id
+        in: path
+        description: Le id de l'étudiant à afficher
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          example: 10
+      responses:
+        "200":
+          description: L'étudiant à afficher
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiant'
+  /etudiants/cours/{cours}:
+    get:
+      tags:
+      - Etudiant
+      summary: Affiche une liste d'étudiant qui ont le cours en paramètre
+      parameters:
+      - name: cours
+        in: path
+        description: Le cours où on veut avoir la liste des étudiants
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: Anglais
+      responses:
+        "200":
+          description: La liste d'étudiants qui ont le cours
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiants'
+  /etudiants/cohorte/{cohorte}:
+    get:
+      tags:
+      - Etudiant
+      summary: Affiche une liste d'étudiant qui sont dans la cohorte en paramètre
+      parameters:
+      - name: cohorte
+        in: path
+        description: La cohorte où on veut avoir la liste des étudiants
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: chevaux_curieux
+      responses:
+        "200":
+          description: La liste d'étudiants qui sont dans la cohorte
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiants'
+  /etudiants/vulkins/all:
+    get:
+      tags:
+      - Etudiant
+      summary: Affiche la liste d'étudiants qui sont dans les Vulkins
+      responses:
+        "200":
+          description: La liste des étudiants qui sont dans les Vulkins
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Etudiants'
+  /stats/moyenne/{nom}:
+    get:
+      tags:
+      - Etudiant
+      - Stats
+      summary: Affiche la liste des cours de l'étudiant ainsi que la moyenne pour
+        chaque cours
+      parameters:
+      - name: nom
+        in: path
+        description: Le nom de l'étudiant
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: Frank
+      responses:
+        "200":
+          description: Un tableau avec le nom de chaque cours de l'étudiant ainsi
+            que la moyenne sa moyenne dans le cours
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Moyenne'
+  /stats/pourcentage/:
+    get:
+      tags:
+      - Etudiant
+      - Stats
+      summary: Affiche le pourcentage d'étudiants dans les Vulkins
+      responses:
+        "200":
+          description: Le pourcentage d'étudiants dans les Vulkins
+          content:
+            application/json:
+              schema:
+                type: number
+                example: 61.53846153846154
+components:
+  schemas:
+    Etudiant:
+      required:
+      - anneeEtude
+      - courriel
+      - cours
+      - da
+      - dateNaissance
+      - estVulkins
+      - nom
+      - nomCohorte
+      type: object
+      properties:
+        _id:
+          type: string
+        nom:
+          type: string
+        courriel:
+          type: string
+        dateNaissance:
+          type: string
+        da:
+          type: string
+        estVulkins:
+          type: boolean
+        anneeEtude:
+          type: number
+        nomCohorte:
+          type: string
+        cours:
+          type: array
+          items:
+            $ref: '#/components/schemas/Cours'
+      example:
+        _id: 4
+        nom: Isabel
+        courriel: isabel@hotmail.com
+        dateNaissance: 2003-11-02T00:00:00.000Z
+        da: 1234567
+        estVulkins: false
+        anneeEtude: 5
+        nomCohorte: chats_vaillants
+        cours: []
+    Etudiants:
+      type: array
+      items:
+        $ref: '#/components/schemas/Etudiant'
+    Cours:
+      required:
+      - enseignant
+      - estGratuit
+      - nom
+      - nombreHeures
+      - notes
+      type: object
+      properties:
+        nom:
+          type: string
+        enseignant:
+          type: string
+        nombreHeures:
+          type: number
+        estGratuit:
+          type: boolean
+        cout:
+          type: number
+        notes:
+          type: array
+          items:
+            type: number
+      example:
+        nom: Informatique
+        enseignant: M. Martinez
+        nombreHeures: 90
+        estGratuit: true
+        notes:
+        - 86
+        - 90
+        - 84
+    Moyenne:
+      required:
+      - _id
+      - cours
+      type: object
+      properties:
+        _id:
+          type: string
+        cours:
+          type: array
+          items:
+            $ref: '#/components/schemas/Moyenne_cours'
+      example:
+        _id: Isabel
+        cours:
+        - nom: Informatique
+          moyenne: 86.2
+        - nom: Philo
+          moyenne: 93.7
+    Moyenne_cours:
+      required:
+      - moyenne
+      - nom
+      type: object
+      properties:
+        nom:
+          type: string
+        moyenne:
+          type: number

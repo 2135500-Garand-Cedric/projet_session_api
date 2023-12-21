@@ -1,6 +1,6 @@
 import * as e from 'express';
 
-import { ISessionUser } from '@src/models/Etudiant';
+// import { ISessionUser } from '@src/models/Etudiant';
 
 
 // **** Express **** //

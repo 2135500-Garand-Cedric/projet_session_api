@@ -1,43 +1,24 @@
-## About
+Procédure d'installation de l'api sur un poste local:
+1. Cloner le repo github
+2. Ouvrir dans Visual Studio Code
+3. Ouvrir un terminal à la racine du projet
+4. Lancer la commande "npm install" pour installer les dépendances du projet
+5. Pour utiliser la bd qui est installé sur un poste local (optionnel):
+    1. Voir la procédure d'installation de la bd mongoDB sur un poste local
+    2. Aller dans le fichier /env/development.env
+    3. Mettre en commentaire la ligne sous "## Connexion a MongoDB Atlas ##"
+    4. Enlever le commentaire de la ligne sous "## Connexion a la bd sur un poste local ##"
+6. Lancer la commande "npm run dev" pour lancer l'api
+7. La documentation des routes de l'api peut être accédé à l'adresse "http://127.0.0.1:3000/"
 
-This project was created with [express-generator-typescript](https://github.com/seanpmaxwell/express-generator-typescript).
+Procédure d'installation de la base de données mongoDB sur un poste local:
+1. Ouvrir mongoDB Compass
+2. Se connecter à l'url "mongodb://localhost:27017"
+3. Appuyer sur le + à côté "Databases" pour ajouter une nouvelle bd
+4. Entrer "projet-session" pour le nom de la bd et "etudiants" pour le nom de la collection
+5. Ouvrir la collection créée
+6. Appuyer sur "ADD DATA" puis sur "Import JSON"
+7. Choisir le fichier "etudiants.json" qui est dans le dossier "dev"
 
-
-## Available Scripts
-
-### `npm run dev`
-
-Run the server in development mode.
-
-### `npm test`
-
-Run all unit-tests with hot-reloading.
-
-### `npm test -- --testFile="name of test file" (i.e. --testFile=Users).`
-
-Run a single unit-test.
-
-### `npm run test:no-reloading`
-
-Run all unit-tests without hot-reloading.
-
-### `npm run lint`
-
-Check for linting errors.
-
-### `npm run build`
-
-Build the project for production.
-
-### `npm start`
-
-Run the production build (Must be built first).
-
-### `npm start -- --env="name of env file" (default is production).`
-
-Run production build with a different env file.
-
-
-## Additional Notes
-
-- If `npm run dev` gives you issues with bcrypt on MacOS you may need to run: `npm rebuild bcrypt --build-from-source`. 
+Url de l'api en ligne: https://api-web3.netlify.app/
+Elle ne marche pas donc pour utiliser l'application, il faut avoir installé l'api en local

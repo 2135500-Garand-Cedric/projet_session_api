@@ -19,6 +19,8 @@ import HttpStatusCodes from '@src/constants/HttpStatusCodes';
 
 import { NodeEnvs } from '@src/constants/misc';
 import { RouteError } from '@src/other/classes';
+import { firebaseAuthentication } from './authentificationFirebase';
+var cors = require('cors')
 
 
 // **** Variables **** //
@@ -32,6 +34,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser(EnvVars.CookieProps.Secret));
+app.use(cors())
+// app.use(firebaseAuthentication)
 
 // Show routes called in console during development
 if (EnvVars.NodeEnv === NodeEnvs.Dev.valueOf()) {
@@ -75,15 +79,18 @@ app.set('views', viewsDir);
 const staticDir = path.join(__dirname, 'public');
 app.use(express.static(staticDir));
 
-// Nav to users pg by default
-app.get('/', (_: Request, res: Response) => {
-  return res.redirect('/etudiants/');
+// rend disponible la documentation de l'interface logicielle
+app.get('/api-docs/', async (req, res) => {
+  res.set('Content-Security-Policy', 'script-src blob:');
+  res.set('Content-Security-Policy', 'worker-src blob:');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// // Redirect to login if not logged in.
-// app.get('/users', (_: Request, res: Response) => {
-//   return res.sendFile('users.html', { root: viewsDir });
-// });
+// redirige vers api-docs
+app.get('/', (req, res) => {
+  res.redirect('/api-docs');
+});
+
 
 
 // **** Export default **** //

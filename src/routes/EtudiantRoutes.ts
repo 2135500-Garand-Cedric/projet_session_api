@@ -56,6 +56,10 @@ async function getVulkins(_: IReq, res: IRes) {
 async function getMoyenneParCours(req: IReq, res: IRes) {
   const nom = req.params.nom;
   const moyennes = await EtudiantService.getMoyenneParCours(nom);
+  console.log(moyennes)
+  if (moyennes.length == 0) {
+    return res.status(HttpStatusCodes.OK).json({})
+  }
   return res.status(HttpStatusCodes.OK).json({ "nom": moyennes[0]._id, "cours": moyennes[0].cours });
 }
 
@@ -72,6 +76,7 @@ async function getPourcentageVulkins(_: IReq, res: IRes) {
  */
 async function add(req: IReq<{etudiant: IEtudiant}>, res: IRes) {
   const { etudiant } = req.body;
+  console.log(etudiant)
   const nouvelEtudiant = await EtudiantService.addOne(etudiant);
   return res.status(HttpStatusCodes.CREATED).json({ nouvelEtudiant });
 }

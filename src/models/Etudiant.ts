@@ -137,11 +137,16 @@ const EtudiantSchema = new Schema<IEtudiant>({
     cours: {
         type: [CoursSchema],
     }
+}, {
+    toJSON: { virtuals: true }
 });
 
 EtudiantSchema.virtual('age').get(function() {
     const currentDate = new Date();
-    return this.dateNaissance.getTime() - currentDate.getTime()
+    // console.log(this.dateNaissance.getTime())
+    // console.log(currentDate.getTime())
+
+    return Math.trunc((currentDate.getTime() - this.dateNaissance.getTime()) / 31563000000)
 });
 
 EtudiantSchema.virtual('nombreHeuresTotalCours').get(function() {
